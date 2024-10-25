@@ -30,7 +30,8 @@ const copy = () => {
         'src/img/*.{jpg,jpeg,png,svg,webp,avif}',
         'src/favicon/**/*',
         'src/robots.txt',
-        'src/favicon.ico'
+        'src/favicon.ico',
+        'src/_headers'
       ],
       { base: 'src', encoding: false }
     )
