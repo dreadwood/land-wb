@@ -11,16 +11,18 @@ block data
 block content
   +b-hero({})
   .page
-    .page__net-1
-      +picture({ image: "/img/net.png", width: 1203, height: 977 })
-    .page__net-2
-      +picture({ image: "/img/net.png", width: 1203, height: 977 })
-    .page__snow-top
-      +picture({ image: "/img/snow-top.png", width: 501, height: 1135 })
-    .page__snow-bottom
-      +picture({ image: "/img/snow-bottom.png", width: 458, height: 588 })
+    .page__bg
+      .page__net-1
+        +picture({ image: "/img/net.png", width: 1203, height: 977 })
+      .page__net-2
+        +picture({ image: "/img/net.png", width: 1203, height: 977 })
+      .page__snow-top
+        +picture({ image: "/img/snow-top.png", width: 501, height: 1135 })
+      .page__snow-bottom
+        +picture({ image: "/img/snow-bottom.png", width: 458, height: 588 })
     .page__wrp
       +b-form({})
       .page__grid
         +b-grid({})
-      +b-copyright({})
+      .page__copyright
+        +b-copyright({})

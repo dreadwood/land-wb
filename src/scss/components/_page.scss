@@ -1,5 +1,13 @@
 .page {
   position: relative;
+  flex-grow: 1;
+  // overflow: hidden;
+}
+.page__bg {
+  position: absolute;
+  inset: 0;
+  // width: 100%;
+  // height: 100%;
   overflow: hidden;
 }
 .page__snow-top {
@@ -41,8 +49,8 @@
     width: $apx-1203;
   }
   @include mobile {
-    bottom: #{$apx-m-70};
-    left: #{$apx-m-290};
+    bottom: -#{$apx-m-70};
+    left: -#{$apx-m-290};
     img {
       width: 200%;
       max-width: none;
@@ -67,6 +75,7 @@
   flex-direction: column;
   gap: $apx-40;
   width: $apx-958;
+  height: 100%;
   margin: 0 auto;
   padding: $apx-40 $apx-20 $apx-70 $apx-20;
   @include mobile {
@@ -79,4 +88,7 @@
 .page__grid {
   margin-right: -#{$apx-m-18};
   margin-left: -#{$apx-m-18};
+}
+.page__copyright {
+  margin-top: auto;
 }
