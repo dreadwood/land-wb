@@ -1,0 +1,54 @@
+.f-checkbox {
+  input:checked + .f-checkbox__label svg {
+    &.checkbox-off {
+      opacity: 0;
+    }
+    &.checkbox-on {
+      opacity: 1;
+    }
+  }
+}
+.f-checkbox__label {
+  @include transition(color);
+  display: flex;
+  align-items: flex-start;
+  column-gap: $apx-10;
+  font-family: $font-default;
+  font-size: $apx-14;
+  line-height: $apx-17;
+  font-weight: 400;
+  text-align: left;
+  color: $color-black;
+  cursor: pointer;
+  &:hover,
+  &:focus-visible {
+    color: $color-hero;
+  }
+  @include mobile {
+    column-gap: $apx-m-18;
+    font-size: $apx-m-13;
+    line-height: $apx-m-16;
+  }
+}
+.f-checkbox__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: $apx-16;
+  aspect-ratio: 1;
+  svg {
+    @include transition(opacity);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $apx-16;
+    &.checkbox-on {
+      opacity: 0;
+    }
+  }
+  @include mobile {
+    width: $apx-m-16;
+    svg {
+      width: $apx-m-16;
+    }
+  }
+}

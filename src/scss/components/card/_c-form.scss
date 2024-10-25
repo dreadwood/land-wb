@@ -1,0 +1,66 @@
+.c-form {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.c-form__contact {
+  display: grid;
+  gap: $apx-14;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  @include mobile {
+    gap: $apx-m-14;
+  }
+}
+.c-form__el {
+  display: grid;
+  grid-template-columns: 1fr $apx-297;
+  align-items: center;
+  gap: $apx-10;
+  @include mobile {
+    grid-template-columns: auto;
+    gap: $apx-m-10;
+  }
+}
+.c-form__agree {
+  display: grid;
+  gap: $apx-10;
+  margin: 0;
+  margin-top: $apx-28;
+  padding: 0;
+  border: 0;
+  @include mobile {
+    gap: $apx-m-10;
+    margin-top: $apx-m-14;
+  }
+}
+.c-form__note-wrp {
+  display: grid;
+  gap: $apx-4;
+  @include mobile {
+    gap: $apx-m-4;
+  }
+}
+.c-form__note {
+  padding-left: $apx-26;
+  font-family: $font-default;
+  font-size: $apx-12;
+  line-height: $apx-14;
+  font-weight: 400;
+  text-align: left;
+  color: $color-gray-455;
+  @include mobile {
+    padding-left: $apx-m-34;
+    font-size: $apx-m-12;
+    line-height: $apx-m-14;
+  }
+}
+.c-form__submit {
+  width: max-content;
+  margin: $apx-40 auto 0 auto;
+  @include mobile {
+    width: auto;
+    margin-top: $apx-m-37;
+  }
+}

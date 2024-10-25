@@ -1,0 +1,8 @@
+mixin btn-submit({ text, color, className, type, isDisabled })
+  button.btn-submit(
+    class=className
+    class=color
+    type=(type || "submit")
+    disabled=isDisabled
+  )
+    span=text

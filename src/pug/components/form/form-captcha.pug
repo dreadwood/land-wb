@@ -1,0 +1,9 @@
+include /elements/images
+
+mixin form-captcha({ text, name, id, isRequired, className })
+  .f-captcha(class=className)
+    input.visually-hidden(type="checkbox" id=id name=name required=isRequired)
+    label.f-captcha__label(for=id)
+      .f-captcha__icon
+        +svg({ name: "icon-check", width: 16, height: 16 })
+      .f-captcha__text=text

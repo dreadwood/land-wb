@@ -1,0 +1,13 @@
+.f-label {
+  display: block;
+  font-family: $font-default;
+  font-size: $apx-18;
+  line-height: $apx-20;
+  font-weight: 400;
+  text-align: left;
+  color: $color-black;
+  @include mobile {
+    font-size: $apx-m-18;
+    line-height: $apx-m-20;
+  }
+}

@@ -1,0 +1,58 @@
+include /components/button/btn-submit
+include /components/form/f-label
+include /components/form/f-field
+include /components/form/f-checkbox
+include /components/accordion
+
+mixin c-form({})
+  form.c-form
+    fielset.c-form__contact
+      .c-form__el
+        +f-label({ text: "Имя", id: "firstName" })
+        +f-field({
+          name: "firstName",
+          id: "firstName",
+          isRequired: true,
+          placeholder: "Имя"
+        })
+      .c-form__el
+        +f-label({ text: "Фамилия", id: "lastName" })
+        +f-field({
+          name: "lastName",
+          id: "lastName",
+          isRequired: true,
+          placeholder: "Фамилия"
+        })
+      .c-form__el
+        +f-label({ text: "Номер телефона", id: "phone" })
+        +f-field({
+          name: "phone",
+          id: "phone",
+          type: "tel",
+          isRequired: true,
+          placeholder: "+7 _ _ _ _ _ _ _ _ _ _"
+        })
+    fielset.c-form__agree
+      +f-checkbox({
+        text: "Мне есть 18 лет",
+        name: "adult",
+        id: "adult",
+        isRequired: true
+      })
+      +f-checkbox({
+        text: "Согласие с политикой конфиденциальности",
+        name: "privacy",
+        id: "privacy",
+        isRequired: true
+      })
+      .c-form__note-wrp
+        +f-checkbox({
+          text: "Я даю согласие на получение рекламно-информационных рассылок от ООО \"Фонбет ТВ\" (ИНН ИНН 7703529560) и его *аффилированных лиц.",
+          name: "agree",
+          id: "agree",
+          isRequired: true
+        })
+        .c-form__note Отписаться от рассылки можно посредством направления письменного запроса направившему ее лицу или посредством функциональных возможностей почтового сервиса, который вы используете
+      +accordion({})
+    .c-form__submit
+      +btn-submit({ text: "Участвовать в розыгрыше" })

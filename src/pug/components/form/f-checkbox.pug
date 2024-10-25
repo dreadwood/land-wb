@@ -1,0 +1,20 @@
+include /elements/images
+
+mixin f-checkbox({ text, name, id, isRequired, className })
+  .f-checkbox(class=className)
+    input.visually-hidden(type="checkbox" id=id name=name required=isRequired)
+    label.f-checkbox__label(for=id)
+      .f-checkbox__icon
+        +svg({
+          name: "checkbox-off",
+          width: 16,
+          height: 16,
+          className: "checkbox-off"
+        })
+        +svg({
+          name: "checkbox-on",
+          width: 16,
+          height: 16,
+          className: "checkbox-on"
+        })
+      .f-checkbox__text=text

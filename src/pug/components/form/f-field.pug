@@ -1,0 +1,10 @@
+mixin f-field({ value, name, type, id, isRequired, placeholder, className })
+  input.f-field(
+    type=(type || "text")
+    id=id
+    name=name
+    value=value
+    required=isRequired
+    placeholder=placeholder
+    class=className
+  )

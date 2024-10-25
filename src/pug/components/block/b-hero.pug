@@ -1,0 +1,12 @@
+mixin b-hero({ className })
+  section.b-hero(class=className)
+    .b-hero__wrp
+      .b-hero__logo-wb
+        +svg({ name: "/img/logo-wildberries.svg", width: 124, height: 34 })
+      .b-hero__prizes
+        +picture({ image: "/img/prizes.png", width: 295, height: 358 })
+      .b-hero__content
+      .b-hero__logo
+        +svg({ name: "/img/logo-fonbet.svg", width: 325, height: 128 })
+      .b-hero__slogan.desktop Выиграй iPhone 16 Pro Max #[br] и другие призы
+      .b-hero__slogan.mobile Выиграй #[br] iPhone 16 Pro Max #[br] и другие призы

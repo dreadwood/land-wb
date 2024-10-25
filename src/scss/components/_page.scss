@@ -1,0 +1,70 @@
+.page {
+  position: relative;
+  overflow: hidden;
+}
+.page__snow-top {
+  position: absolute;
+  top: -#{$apx-250};
+  right: 0;
+  img {
+    width: $apx-501;
+  }
+  @include mobile {
+    top: $apx-m-210;
+    right: -#{$apx-m-130};
+    img {
+      width: $apx-m-400;
+    }
+  }
+}
+.page__snow-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  img {
+    width: $apx-458;
+  }
+  @include mobile {
+    bottom: -210px;
+    left: -100px;
+    img {
+      width: 400px;
+    }
+  }
+}
+.page__net-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  img {
+    width: $apx-1203;
+  }
+}
+.page__net-2 {
+  position: absolute;
+  right: -#{$apx-385};
+  bottom: -#{$apx-504};
+  img {
+    width: $apx-1203;
+  }
+}
+.page__wrp {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: $apx-40;
+  width: $apx-958;
+  margin: 0 auto;
+  padding: $apx-40 $apx-20 $apx-70 $apx-20;
+  @include mobile {
+    gap: $apx-m-37;
+    width: 100%;
+    max-width: none;
+    padding: $apx-m-37 $apx-m-18 $apx-m-40 $apx-m-18;
+  }
+}
+.page__grid {
+  margin-right: -#{$apx-m-18};
+  margin-left: -#{$apx-m-18};
+}

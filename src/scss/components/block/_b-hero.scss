@@ -1,0 +1,89 @@
+.b-hero {
+  font-family: $font-default;
+  font-weight: 400;
+  text-align: left;
+  color: $color-white;
+  background-color: $color-hero;
+  @include mobile {
+    // height: $apx-m-670; // TODO: 2024-10-24 / remove
+  }
+}
+.b-hero__wrp {
+  position: relative;
+  width: $apx-958;
+  margin: 0 auto;
+  padding: $apx-80 $apx-20 $apx-60 $apx-20;
+  @include mobile {
+    width: 100%;
+    padding: $apx-m-32 $apx-m-18 $apx-m-398 $apx-m-18;
+  }
+}
+.b-hero__logo-wb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  img {
+    width: $apx-124;
+  }
+  @include mobile {
+    top: auto;
+    right: $apx-m-18;
+    bottom: 0;
+    img {
+      width: $apx-m-88;
+    }
+  }
+}
+.b-hero__prizes {
+  position: absolute;
+  right: $apx-145;
+  bottom: 0;
+  img {
+    width: $apx-295;
+  }
+  @include mobile {
+    right: $apx-m-14;
+    bottom: $apx-m-16;
+    img {
+      width: $apx-m-295;
+    }
+  }
+}
+.b-hero__content {
+  width: $apx-485;
+  @include mobile {
+    width: auto;
+  }
+}
+.b-hero__logo {
+  img {
+    width: $apx-325;
+  }
+  @include mobile {
+    img {
+      width: $apx-m-286;
+    }
+  }
+}
+.b-hero__slogan {
+  margin-top: $apx-38;
+  font-size: $apx-30;
+  line-height: $apx-33;
+  font-weight: 700;
+  text-transform: uppercase;
+  &.mobile {
+    display: none;
+  }
+  @include mobile {
+    margin-top: $apx-m-36;
+    font-size: $apx-m-28;
+    line-height: $apx-m-31;
+    letter-spacing: -0.01rem;
+    &.desktop {
+      display: none;
+    }
+    &.mobile {
+      display: block;
+    }
+  }
+}

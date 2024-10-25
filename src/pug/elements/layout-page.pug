@@ -1,0 +1,12 @@
+include /elements/head
+
+- let title = ""
+
+block data
+
+doctype html
+html(lang="ru")
+  +head({title})
+  body
+    block content
+    include /elements/script

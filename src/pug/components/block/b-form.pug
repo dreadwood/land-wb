@@ -1,0 +1,8 @@
+include /components/card/c-form
+
+mixin b-form({ className })
+  section.b-form(class=className)
+    .b-form__title Участвуйте в розыгрыше
+    .b-form__subtitle Заполни форму и выиграй: #[br] iPhone 16 Pro Max, AirPods Pro, билеты на FONBET Кубок России, форму любимой команды
+    .b-form__content
+      +c-form({})

@@ -1,0 +1,12 @@
+mixin c-group({ title, matches })
+  .c-group.swiper-slide
+    .c-group__title=title
+    .c-group__list
+      each it in matches
+        .c-group__item
+          .c-group__name=it.team1
+          .c-group__date
+            div=it.date
+            div=it.time
+          .c-group__name=it.team2
+

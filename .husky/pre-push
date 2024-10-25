@@ -1,0 +1,8 @@
+# Запускаем скрипт prepush-check из package.json
+# pnpm run prepush-check
+
+# Если предыдущая команда завершилась с ошибкой, прекратить пуш
+# if [ $? -ne 0 ]; then
+#   echo "Pre-push hook failed. Aborting push."
+#   exit 1
+# fi

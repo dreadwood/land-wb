@@ -1,0 +1,74 @@
+.c-group {
+  padding: $apx-37 $apx-30 $apx-40 $apx-30;
+  font-family: $font-default;
+  font-weight: 400;
+  text-align: left;
+  color: $color-black;
+  background-color: $color-white;
+  border-radius: $apx-30;
+  @include mobile {
+    padding: $apx-m-33 $apx-m-20 $apx-m-37 $apx-m-20;
+    border-radius: $apx-m-24;
+  }
+}
+.c-group__title {
+  font-size: $apx-18;
+  line-height: $apx-22;
+  font-weight: 500;
+  text-align: center;
+  @include mobile {
+    font-size: $apx-m-14;
+    line-height: $apx-m-18;
+  }
+}
+.c-group__list {
+  display: grid;
+  gap: $apx-22;
+  margin-top: $apx-21;
+  @include mobile {
+    gap: $apx-m-18;
+    margin-top: $apx-m-16;
+  }
+}
+.c-group__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: $apx-6;
+  min-height: $apx-52;
+  padding: $apx-7 $apx-22;
+  border: $apx-2 solid $color-black;
+  border-radius: $apx-29;
+  @include mobile {
+    gap: $apx-m-6;
+    min-height: $apx-m-42;
+    padding: $apx-m-6 $apx-m-16;
+    border-width: $apx-m-1;
+    border-radius: $apx-m-20;
+  }
+}
+.c-group__name {
+  font-size: $apx-14;
+  line-height: $apx-16;
+  font-weight: 700;
+  text-transform: uppercase;
+  &:last-child {
+    text-align: right;
+  }
+  @include mobile {
+    font-size: $apx-m-11;
+    line-height: $apx-m-13;
+  }
+}
+.c-group__date {
+  display: grid;
+  gap: $apx-4;
+  font-size: $apx-12;
+  line-height: $apx-16;
+  text-align: center;
+  @include mobile {
+    gap: $apx-m-3;
+    font-size: $apx-m-10;
+    line-height: $apx-m-13;
+  }
+}
