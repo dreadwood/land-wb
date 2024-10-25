@@ -1,84 +1,86 @@
 include /components/card/c-group
 
 mixin b-grid({})
-  -
-    let groupItems = [
-      {
-        title: "Группа A",
-        matches: [
-          {
-            team1: "Динамо МХ",
-            team2: "Спартак",
-            date: "22.10.2024",
-            time: "18:30"
-          },
-          {
-            team1: "Крылья советов",
-            team2: "Динамо М",
-            date: "24.10.2024",
-            time: "14:00"
-          },
-        ]
-      },
-      {
-        title: "Группа B",
-        matches: [
-          {
-            team1: "оренбург",
-            team2: "химки",
-            date: "23.10.2024",
-            time: "16:30"
-          },
-          {
-            team1: "ростов",
-            team2: "локомотив",
-            date: "23.10.2024",
-            time: "19:00"
-          },
-        ]
-      },
-      {
-        title: "Группа C",
-        matches: [
-          {
-            team1: "цска",
-            team2: "ахмат",
-            date: "22.10.2024",
-            time: "20:45"
-          },
-          {
-            team1: "краснодар",
-            team2: "пари НН",
-            date: "24.10.2024",
-            time: "21:15"
-          },
-        ]
-      },
-      {
-        title: "Группа D",
-        matches: [
-          {
-            team1: "факел",
-            team2: "зенит",
-            date: "22.10.2024",
-            time: "16:15"
-          },
-          {
-            team1: "акрон",
-            team2: "рубин",
-            date: "23.10.2024",
-            time: "19:00 "
-          },
-        ]
-      },
-    ]
-
+  //- -
+  //-   let groupItems = [
+  //-     {
+  //-       title: "Группа A",
+  //-       matches: [
+  //-         {
+  //-           team1: "Динамо МХ",
+  //-           team2: "Спартак",
+  //-           date: "22.10.2024",
+  //-           time: "18:30"
+  //-         },
+  //-         {
+  //-           team1: "Крылья советов",
+  //-           team2: "Динамо М",
+  //-           date: "24.10.2024",
+  //-           time: "14:00"
+  //-         },
+  //-       ]
+  //-     },
+  //-     {
+  //-       title: "Группа B",
+  //-       matches: [
+  //-         {
+  //-           team1: "оренбург",
+  //-           team2: "химки",
+  //-           date: "23.10.2024",
+  //-           time: "16:30"
+  //-         },
+  //-         {
+  //-           team1: "ростов",
+  //-           team2: "локомотив",
+  //-           date: "23.10.2024",
+  //-           time: "19:00"
+  //-         },
+  //-       ]
+  //-     },
+  //-     {
+  //-       title: "Группа C",
+  //-       matches: [
+  //-         {
+  //-           team1: "цска",
+  //-           team2: "ахмат",
+  //-           date: "22.10.2024",
+  //-           time: "20:45"
+  //-         },
+  //-         {
+  //-           team1: "краснодар",
+  //-           team2: "пари НН",
+  //-           date: "24.10.2024",
+  //-           time: "21:15"
+  //-         },
+  //-       ]
+  //-     },
+  //-     {
+  //-       title: "Группа D",
+  //-       matches: [
+  //-         {
+  //-           team1: "факел",
+  //-           team2: "зенит",
+  //-           date: "22.10.2024",
+  //-           time: "16:15"
+  //-         },
+  //-         {
+  //-           team1: "акрон",
+  //-           team2: "рубин",
+  //-           date: "23.10.2024",
+  //-           time: "19:00 "
+  //-         },
+  //-       ]
+  //-     },
+  //-   ]
+  //-
+  include /data/group-list
   section.b-grid
     .b-grid__title
-      span 6-й тур
-      span путь РПЛ
+      span 6-й раунд
+      .b-grid__separate
+      span Путь регионов
     .swiper.js-group-slider
       .b-grid__content.swiper-wrapper
-        each it in groupItems
+        each it in groupList
           +c-group(it)
       .b-grid__bullet-list

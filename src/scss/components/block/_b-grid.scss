@@ -2,43 +2,37 @@
   //
 }
 .b-grid__title {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   justify-content: center;
+  align-items: center;
   font-family: $font-default;
   font-size: $apx-28;
   line-height: $apx-31;
   font-weight: 700;
   color: $color-white;
   text-transform: uppercase;
-  span {
-    &:not(:first-child) {
-      display: flex;
-      &::before {
-        content: "";
-        display: block;
-        width: $apx-2;
-        height: 100%;
-        margin-right: $apx-22;
-        margin-left: $apx-22;
-        background-color: currentcolor;
-        border-radius: $apx-2;
-      }
-    }
+  span:first-child {
+    text-align: right;
   }
   @include mobile {
     font-size: $apx-m-26;
     line-height: $apx-m-29;
-    span {
-      &:not(:first-child) {
-        &::before {
-          width: $apx-m-2;
-          height: 100%;
-          margin-right: $apx-m-22;
-          margin-left: $apx-m-22;
-          border-radius: $apx-m-2;
-        }
-      }
-    }
+  }
+}
+.b-grid__separate {
+  width: $apx-3;
+  height: 100%;
+  margin-right: $apx-22;
+  margin-left: $apx-22;
+  background-color: $color-white;
+  border-radius: $apx-2;
+  @include mobile {
+    width: $apx-m-2;
+    height: 100%;
+    margin-right: $apx-m-22;
+    margin-left: $apx-m-22;
+    border-radius: $apx-m-2;
   }
 }
 .swiper {
@@ -54,7 +48,6 @@
   @include mobile {
     display: flex;
     grid-template-columns: auto;
-    // gap: $apx-m-36;
     margin-top: $apx-m-37;
   }
 }
