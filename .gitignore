@@ -2,7 +2,7 @@
 dist-ssr
 dist.zip
 temp
-dist
+# dist
 *.local
 
 # generated types

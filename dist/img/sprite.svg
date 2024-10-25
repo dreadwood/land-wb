@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="checkbox-off" viewBox="0 0 17 17"><g fill="none">
+<rect x="1" y="1" width="15" height="15" rx="2.5" stroke="black"/>
+</g></symbol><symbol id="checkbox-on" viewBox="0 0 17 17"><g fill="none">
+<rect x="1" y="1" width="15" height="15" rx="2.5" stroke="black"/>
+<circle cx="8.5" cy="8.5" r="4" fill="black"/>
+</g></symbol><symbol id="triangle" viewBox="0 0 17 16">
+<path d="M13 8L5.5 12.3301L5.5 3.66987L13 8Z"/>
+</symbol></svg>
