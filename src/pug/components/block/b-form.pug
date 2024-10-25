@@ -1,8 +1,21 @@
 include /components/card/c-form
 
 mixin b-form({ className })
-  section.b-form(class=className)
-    .b-form__title Участвуйте в розыгрыше
-    .b-form__subtitle Заполни форму и выиграй: #[br] iPhone 16 Pro Max, AirPods Pro, билеты на FONBET Кубок России, форму любимой команды
-    .b-form__content
-      +c-form({})
+  section.b-form.js-card(class=className)
+    .js-card-content
+      .b-form__title Участвуйте в розыгрыше
+      .b-form__subtitle Заполни форму и выиграй: #[br] iPhone 16 Pro Max, AirPods Pro, билеты на FONBET Кубок России, форму любимой команды
+      .b-form__content
+        +c-form({})
+    .b-form__success.js-card-success(hidden)
+      .b-form__title СПАСИБО
+      .b-form__subtitle Теперь вы участвуете в розыгрыше #[br] iPhone 16 Pro Max
+    .b-form__error.js-card-error(hidden)
+      .b-form__title Произошла ошибка :(
+      .b-form__subtitle Если она будет повторяться, попробуйте позже
+      .b-form__btn
+        +btn-submit({
+          text: "Вернуться к анкете",
+          type: "button",
+          className: "js-card-back-btn"
+        })

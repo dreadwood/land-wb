@@ -38,3 +38,7 @@ button {
   color: inherit;
   cursor: pointer;
 }
+[hidden] {
+  /* stylelint-disable-next-line declaration-no-important */
+  display: none !important;
+}

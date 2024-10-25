@@ -1,4 +1,5 @@
 .b-form {
+  @include transition(height);
   padding: $apx-40 $apx-104;
   font-family: $font-default;
   font-weight: 500;
@@ -41,5 +42,24 @@
   @include mobile {
     width: auto;
     margin-top: $apx-m-32;
+  }
+}
+.b-form__success {
+  padding: $apx-90 0;
+  @include mobile {
+    padding: $apx-m-100 0;
+  }
+}
+.b-form__error {
+  padding-top: $apx-90;
+  color: $color-page;
+  @include mobile {
+    padding-top: $apx-m-100;
+  }
+}
+.b-form__btn {
+  margin-top: $apx-90;
+  @include mobile {
+    margin-top: $apx-m-100;
   }
 }

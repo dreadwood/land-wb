@@ -1,11 +1,29 @@
 .b-hero {
+  position: relative;
   font-family: $font-default;
   font-weight: 400;
   text-align: left;
   color: $color-white;
   background-color: $color-hero;
+}
+.b-hero__bg {
+  position: absolute;
+  inset: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &.mobile {
+    display: none;
+  }
   @include mobile {
-    // height: $apx-m-670; // TODO: 2024-10-24 / remove
+    &.desktop {
+      display: none;
+    }
+    &.mobile {
+      display: block;
+    }
   }
 }
 .b-hero__wrp {

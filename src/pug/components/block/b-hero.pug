@@ -1,5 +1,12 @@
 mixin b-hero({ className })
   section.b-hero(class=className)
+    //- .b-hero__wall
+      +picture({ image: "/img/wall-texture.jpg", width: 1920, height: 370 })
+    .b-hero__bg.desktop
+      +picture({ image: "/img/hero-bg.jpg", width: 1920, height: 370 })
+    .b-hero__bg.mobile
+      +picture({ image: "/img/hero-bg-mobile.jpg", width: 1920, height: 370 })
+
     .b-hero__wrp
       .b-hero__logo-wb
         +svg({ name: "/img/logo-wildberries.svg", width: 124, height: 34 })

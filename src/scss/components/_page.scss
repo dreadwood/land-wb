@@ -25,10 +25,11 @@
     width: $apx-458;
   }
   @include mobile {
-    bottom: -210px;
-    left: -100px;
+    bottom: $apx-m-196;
+    left: -$apx-m-52;
+    rotate: 79deg;
     img {
-      width: 400px;
+      width: $apx-m-400;
     }
   }
 }
@@ -39,6 +40,14 @@
   img {
     width: $apx-1203;
   }
+  @include mobile {
+    bottom: #{$apx-m-70};
+    left: #{$apx-m-290};
+    img {
+      width: 200%;
+      max-width: none;
+    }
+  }
 }
 .page__net-2 {
   position: absolute;
@@ -46,6 +55,9 @@
   bottom: -#{$apx-504};
   img {
     width: $apx-1203;
+  }
+  @include mobile {
+    display: none;
   }
 }
 .page__wrp {
