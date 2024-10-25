@@ -56,6 +56,39 @@
     line-height: $apx-m-14;
   }
 }
+.c-form__link {
+  @include transition(color);
+  display: flex;
+  align-items: center;
+  gap: $apx-9;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  font-family: $font-default;
+  font-size: $apx-12;
+  line-height: $apx-14;
+  font-weight: 400;
+  text-align: left;
+  color: $color-gray-455;
+  &:hover,
+  &:focus-visible {
+    color: $color-hero;
+  }
+  svg {
+    flex-shrink: 0;
+    width: $apx-16;
+    aspect-ratio: 1;
+    fill: $color-black;
+  }
+  @include mobile {
+    gap: $apx-m-17;
+    font-size: $apx-m-12;
+    line-height: $apx-m-14;
+    svg {
+      width: $apx-m-16;
+    }
+  }
+}
 .c-form__submit {
   width: max-content;
   margin: $apx-40 auto 0 auto;

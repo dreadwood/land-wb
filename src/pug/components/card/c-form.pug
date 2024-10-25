@@ -5,12 +5,13 @@ include /components/form/f-checkbox
 include /components/accordion
 
 mixin c-form({})
+  - let personalData = "https://fon.bet/official-documents/fonpersdata/"
   form.c-form.js-card-form(action="https://fonstats.ru/code/check.php")
     fielset.c-form__contact
       .c-form__el
         input(type="hidden" name="bet" value="auth")
-        input(type="hidden" name="bet" value="WbKRF")
-        input(type="hidden" name="bet" value="WbKRF")
+        input(type="hidden" name="event" value="WbKRF")
+        input(type="hidden" name="landing" value="WbKRF")
         +f-label({ text: "Имя", id: "firstName" })
         +f-field({
           name: "firstName",
@@ -56,7 +57,14 @@ mixin c-form({})
           id: "advertising"
         })
         .c-form__note Отписаться от рассылки можно посредством направления письменного запроса направившему ее лицу или посредством функциональных возможностей почтового сервиса, который вы используете
-      +accordion({})
+      //- +accordion({})
+      a.c-form__link(
+        href=personalData
+        target="_blank"
+        rel="noopener noreferrer"
+      )
+        +svg({ name: "triangle", width: 10, height: 10 })
+        span Порядок обработки персональных данных
     .c-form__submit
       +btn-submit({
         text: "Участвовать в розыгрыше",
