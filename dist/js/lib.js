@@ -21,36 +21,6 @@ window.utils = {
 }
 
 /**
- * accordion.js
- */
-;(() => {
-  /** @type {HTMLDivElement[]} */
-  const accordions = document.querySelectorAll('.js-accordion')
-
-  accordions.forEach((it) => {
-    /** @type {HTMLButtonElement | null} */
-    const btn = it.querySelector('.js-accordion-btn')
-
-    /** @type {HTMLDivElement | null} */
-    const content = it.querySelector('.js-accordion-content')
-
-    if (!btn || !content) {
-      return
-    }
-
-    btn.addEventListener('click', () => {
-      it.classList.toggle('show')
-
-      if (it.classList.contains('show')) {
-        content.style = `height: ${content.scrollHeight}px;`
-      } else {
-        content.style = ''
-      }
-    })
-  })
-})()
-
-/**
  * b-form.js
  */
 ;(() => {
@@ -107,6 +77,13 @@ window.utils = {
       evt.preventDefault()
 
       const formData = new FormData(form)
+
+      const name =
+        `${formData.get('firstName')} ${formData.get('lastName')}`.trim()
+      formData.append('name', name)
+      formData.delete('firstName')
+      formData.delete('lastName')
+
       const urlParams = new URLSearchParams(formData)
       const body = urlParams.toString()
 
