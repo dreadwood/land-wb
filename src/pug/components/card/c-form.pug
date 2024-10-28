@@ -2,7 +2,6 @@ include /components/button/btn-submit
 include /components/form/f-label
 include /components/form/f-field
 include /components/form/f-checkbox
-include /components/accordion
 
 mixin c-form({})
   - let personalData = "https://fon.bet/official-documents/fonpersdata/"
@@ -24,7 +23,6 @@ mixin c-form({})
         +f-field({
           name: "lastName",
           id: "lastName",
-          isRequired: true,
           placeholder: "Фамилия"
         })
       .c-form__el
@@ -57,7 +55,6 @@ mixin c-form({})
           id: "advertising"
         })
         .c-form__note Отписаться от рассылки можно посредством направления письменного запроса направившему ее лицу или посредством функциональных возможностей почтового сервиса, который вы используете
-      //- +accordion({})
       a.c-form__link(
         href=personalData
         target="_blank"

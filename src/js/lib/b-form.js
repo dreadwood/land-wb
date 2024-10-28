@@ -55,6 +55,13 @@
       evt.preventDefault()
 
       const formData = new FormData(form)
+
+      const name =
+        `${formData.get('firstName')} ${formData.get('lastName')}`.trim()
+      formData.append('name', name)
+      formData.delete('firstName')
+      formData.delete('lastName')
+
       const urlParams = new URLSearchParams(formData)
       const body = urlParams.toString()
 
