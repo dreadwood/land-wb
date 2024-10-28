@@ -353,41 +353,6 @@ input[type=file].visually-hidden {
   clip-path: inset(100%);
 }
 
-.b-copyright {
-  display: flex;
-  align-items: center;
-  gap: 1.04166vw;
-  font-family: "CeraPro", sans-serif;
-  font-size: 0.624996vw;
-  line-height: 0.833328vw;
-  font-weight: 400;
-  text-align: left;
-  color: rgba(255, 255, 255, 0.6);
-}
-@media (max-width: 1023px) {
-  .b-copyright {
-    display: grid;
-    gap: 2.66667vw;
-    font-size: 3.200004vw;
-    line-height: 4.266672vw;
-  }
-}
-
-.b-copyright__age {
-  flex-shrink: 0;
-  font-size: 0.833328vw;
-  line-height: 1.04166vw;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.4);
-}
-@media (max-width: 1023px) {
-  .b-copyright__age {
-    font-size: 4.266672vw;
-    line-height: 4.266672vw;
-    font-weight: 400;
-  }
-}
-
 .b-form {
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
