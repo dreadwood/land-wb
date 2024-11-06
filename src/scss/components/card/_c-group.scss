@@ -51,6 +51,7 @@
   font-size: $apx-14;
   line-height: $apx-16;
   font-weight: 700;
+  white-space: pre-wrap;
   text-transform: uppercase;
   &:last-child {
     text-align: right;

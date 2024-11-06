@@ -10,10 +10,14 @@
   font-size: $apx-28;
   line-height: $apx-31;
   font-weight: 700;
+  text-align: center;
   color: $color-white;
   text-transform: uppercase;
   span:first-child {
     text-align: right;
+  }
+  span:last-child {
+    text-align: left;
   }
   @include mobile {
     font-size: $apx-m-26;
