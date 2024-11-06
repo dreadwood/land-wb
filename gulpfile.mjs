@@ -29,6 +29,7 @@ const copy = () => {
         'src/fonts/**/*.{woff,woff2}',
         'src/img/*.{jpg,jpeg,png,svg,webp,avif}',
         'src/favicon/**/*',
+        'src/doc/**/*',
         'src/robots.txt',
         'src/favicon.ico'
       ],

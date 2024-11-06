@@ -1,0 +1,23 @@
+.b-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $apx-20;
+  font-family: $font-default;
+  font-size: $apx-16;
+  line-height: $apx-20;
+  font-weight: 400;
+  text-align: center;
+  color: transparentize($color-white, 0.4);
+  @include mobile {
+    font-size: $apx-m-12;
+    line-height: $apx-m-16;
+  }
+}
+.b-bottom__link {
+  @include transition(color);
+  &:hover,
+  &:focus-visible {
+    color: transparentize($color-white, 0.1);
+  }
+}
