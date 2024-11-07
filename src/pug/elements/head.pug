@@ -7,8 +7,8 @@ mixin head({ title })
 
     title=title
 
-    link(rel="icon" href="/favicon/favicon.png" type="image/png")
-    link(rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180" )
-    link(rel="icon" href="/favicon.ico")
+    link(rel="icon" href=`${baseUrl}/favicon/favicon.png` type="image/png")
+    link(rel="apple-touch-icon" href=`${baseUrl}/favicon/apple-touch-icon.png` sizes="180x180" )
+    link(rel="icon" href=`${baseUrl}/favicon.ico`)
 
-    link(rel="stylesheet" href="/css/style.css")
+    link(rel="stylesheet" href=`${baseUrl}/css/style.css`)

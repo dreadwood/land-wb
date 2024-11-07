@@ -18,6 +18,8 @@ import sourcemap from 'gulp-sourcemaps'
 import svgstore from 'gulp-svgstore'
 import sync from 'browser-sync'
 
+const baseUrl = '.'
+
 const clean = async () => {
   return await deleteAsync(['dist'])
 }
@@ -123,7 +125,13 @@ const html = () => {
   return gulp
     .src('src/pug/pages/**/*.pug')
     .pipe(plumber())
-    .pipe(pug({ pretty: true, basedir: 'src/pug' }))
+    .pipe(
+      pug({
+        pretty: true,
+        basedir: 'src/pug',
+        locals: { baseUrl }
+      })
+    )
     .pipe(gulp.dest('dist'))
 }
 
