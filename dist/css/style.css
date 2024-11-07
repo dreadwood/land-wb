@@ -946,6 +946,13 @@ input[type=file].visually-hidden {
   }
 }
 
+.f-checkbox {
+  position: relative;
+}
+.f-checkbox input {
+  top: 0.937494vw;
+  left: 0.416664vw;
+}
 .f-checkbox input:checked + .f-checkbox__label svg.checkbox-off {
   opacity: 0;
 }
@@ -957,6 +964,12 @@ input[type=file].visually-hidden {
 }
 .f-checkbox input:user-invalid + .f-checkbox__label svg.checkbox-error {
   opacity: 1;
+}
+@media (max-width: 1023px) {
+  .f-checkbox input {
+    top: 4.800006vw;
+    left: 2.133336vw;
+  }
 }
 
 .f-checkbox__label {
