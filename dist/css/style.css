@@ -952,6 +952,12 @@ input[type=file].visually-hidden {
 .f-checkbox input:checked + .f-checkbox__label svg.checkbox-on {
   opacity: 1;
 }
+.f-checkbox input:user-invalid + .f-checkbox__label svg.checkbox-off {
+  opacity: 0;
+}
+.f-checkbox input:user-invalid + .f-checkbox__label svg.checkbox-error {
+  opacity: 1;
+}
 
 .f-checkbox__label {
   transition-timing-function: ease-in-out;
@@ -997,6 +1003,9 @@ input[type=file].visually-hidden {
   width: 0.833328vw;
 }
 .f-checkbox__icon svg.checkbox-on {
+  opacity: 0;
+}
+.f-checkbox__icon svg.checkbox-error {
   opacity: 0;
 }
 @media (max-width: 1023px) {
