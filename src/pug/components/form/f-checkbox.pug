@@ -17,4 +17,10 @@ mixin f-checkbox({ text, name, id, isRequired, className })
           height: 16,
           className: "checkbox-on"
         })
+        +svg({
+          name: "checkbox-error",
+          width: 16,
+          height: 16,
+          className: "checkbox-error"
+        })
       .f-checkbox__text=text

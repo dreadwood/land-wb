@@ -7,6 +7,14 @@
       opacity: 1;
     }
   }
+  input:user-invalid + .f-checkbox__label svg {
+    &.checkbox-off {
+      opacity: 0;
+    }
+    &.checkbox-error {
+      opacity: 1;
+    }
+  }
 }
 .f-checkbox__label {
   @include transition(color);
@@ -42,6 +50,9 @@
     left: 0;
     width: $apx-16;
     &.checkbox-on {
+      opacity: 0;
+    }
+    &.checkbox-error {
       opacity: 0;
     }
   }
